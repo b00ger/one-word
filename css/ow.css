@@ -1,0 +1,43 @@
+body{
+	font-family: Helvetica;
+}
+
+h2, h3{
+	color: #EEE;
+}
+
+.white-out{
+	
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #FFFFFF;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	z-index: 5;
+	display: none;
+	
+} 
+
+.target{
+	-moz-box-shadow: 2px 2px 2px 3px #ccc;
+	-webkit-box-shadow: 2px 2px 2px 3px #ccc;
+	box-shadow: 2px 2px 3px 2px #ccc;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	width: 30%;
+	top: 10%;
+	left: 35%;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	background: #FFF;
+	display: none;
+	position: absolute;
+	z-index: 10;
+	text-align: center;	
+}
+
