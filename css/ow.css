@@ -1,9 +1,13 @@
-	body{
+body{
 	font-family: Helvetica;
 }
 
-h2, h3{
-	color: #EEE;
+h2{
+	color: #F0F0F0;
+}
+
+h3{
+	color: #FAFAFA;
 }
 
 .white-out{

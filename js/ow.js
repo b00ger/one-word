@@ -3,12 +3,13 @@
 	var methods = {
 
 		init : function( options ){ 
+					$('body').append('<div class="white-out" style="display: none;"></div><div class="target" style="display: none;"><h3>to</h3><h1>the</h1><h2>all</h2></div>');
 					this.each(function(i){	
-					
-					$(this).click(function(){
+					$(this).after('<a href="#" class="oneword' + i + '">Read in One Word</a>');
+					$('.oneword' + i).click(function(){
+						
 						
 						$('.white-out').show();
-						
 						$('.target').show();
 						var curr = 1;
 						$('.white-out').click(function(){
@@ -51,7 +52,7 @@ $.fn.oneword = function(method) {
 })( jQuery );
 
 $(document).ready(function(){
-		$('.oneword').oneword();
+		$('.entry').oneword();
 });
 
 
