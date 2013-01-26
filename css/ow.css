@@ -9,7 +9,17 @@ h2{
 h3{
 	color: #FAFAFA;
 }
-
+ul.speed-pick{
+	list-style-type: none;
+	display: none;
+	background: #FFFFFF;
+	border: 1px solid #333;
+	position: absolute;
+}
+ul.speed-pick a{
+	background: #FAFAFA;
+	border: 1px solid #333;
+}
 .white-out{
 	
 	height: 100%;
