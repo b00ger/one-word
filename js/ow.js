@@ -2,37 +2,40 @@
 	var timers = [];
 	var methods = {
 
-		init : function( options ){ 
-					$('body').append('<div class="white-out" style="display: none;"></div><div class="target" style="display: none;"><h3>to</h3><h1>the</h1><h2>all</h2></div>');
-					var speed_link = "<ul class='speed-pick'><li><a>60</a></li><li><a>120</a></li><li><a>180</a></li></ul>";
+		init : function( options ){
+					 
+					$('body').append('<div class="white-out" style="display: none;"></div>');
+					$('body').append('<div class="target" style="display: none;"><h3>to</h3><h1>the</h1><h2>all</h2></div>');
+					var speed_link = "<span class='speed-picker'> <a>300</a> <a>400</a> <a>500</a> </span>";
+					
 					this.each(function(i){	
 					$(this).addClass('obj'+i);
-					$(this).after('<a href="#" class="oneword' + i + '">Read in One Word'+ speed_link + '</a>');
+					$(this).after('<a href="#" class="oneword' + i + '">Read in One Word</a>' + speed_link);
 					$('.oneword' + i).click(function(){
 						
-						var menu = $(this).next('ul.speed-pick'); 
-						var pos = $(this).next('ul.speed-pick').position();
-						alert(pos.top);
-						alert(pos.left);
-						menu.css({'top':pos.top + 'px', 'left' : pos.right + 'px'})
+						var menu = $(this).next('span.speed-picker'); 
+						var pos = $(this).next('span.speed-picker').position();
+						menu.css({'top':pos.top + 'px', 'left' :  '100px'})
 						menu.toggle();
 						
-						menu.children('li').children('a').click(function(){
+						menu.children('a').click(function(){
 							
-							var speed = Number($(this).text());
-							
+							var speed = 60000/Number($(this).text());
 							$('.white-out').show();
 							$('.target').show();
 							var curr = 1;
 							$('.white-out').click(function(){
-								$('.white-out').hide();
-								$('.target').hide();	
+								$('.white-out').fadeOut();
+								$('.target').fadeOut();	
 								clearInterval(timer);	
 							});	
 							var copy = $.trim( $('.obj'+i).text().replace( /[\s\n\r]+/g, ' ' ) ).split(" ");
 							var three_words = function(){
-								if(curr >= copy.length)
+								if(curr >= copy.length){
 									clearInterval(timer);
+									$('.white-out').fadeOut();
+									$('.target').fadeOut();
+								}
 								var last = (curr > 1) ? copy[curr-2] : "&nbsp;";
 								var current = copy[curr-1];
 								var next = (curr < copy.length) ? copy[curr+2] : "&nbsp;";

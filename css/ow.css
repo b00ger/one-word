@@ -9,16 +9,24 @@ h2{
 h3{
 	color: #FAFAFA;
 }
-ul.speed-pick{
-	list-style-type: none;
+span.speed-picker{
 	display: none;
-	background: #FFFFFF;
-	border: 1px solid #333;
-	position: absolute;
+	margin-left: 2em;
+	
+	
+	
 }
-ul.speed-pick a{
+
+span.speed-picker a{
 	background: #FAFAFA;
-	border: 1px solid #333;
+	padding: .5em .25em;	
+	border: 1px solid #EEE;
+	cursor: pointer;
+}
+
+
+.entry{
+	margin-top: 2em;
 }
 .white-out{
 	
