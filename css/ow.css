@@ -63,3 +63,7 @@ span.speed-picker a{
 	text-align: center;	
 }
 
+.modal-close{
+	position: absolute;
+	display: none;
+}

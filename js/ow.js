@@ -6,6 +6,7 @@
 					 
 					$('body').append('<div class="white-out" style="display: none;"></div>');
 					$('body').append('<div class="target" style="display: none;"><h3>to</h3><h1>the</h1><h2>all</h2></div>');
+					$('.target').before('<a class="modal-close">close</a>');
 					var speed_link = "<span class='speed-picker'> <a>300</a> <a>400</a> <a>500</a> </span>";
 					
 					this.each(function(i){	
@@ -23,9 +24,11 @@
 							var speed = 60000/Number($(this).text());
 							$('.white-out').show();
 							$('.target').show();
+							$('.modal-close').show();
 							var curr = 1;
 							$('.white-out').click(function(){
 								$('.white-out').fadeOut();
+								$('.modal-close').fadeOut();
 								$('.target').fadeOut();	
 								clearInterval(timer);	
 							});	
