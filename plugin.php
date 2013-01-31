@@ -1,15 +1,15 @@
 <?php
 /*
-Plugin Name: TODO
-Plugin URI: TODO
-Description: TODO
+Plugin Name: oneword
+Plugin URI: oneword
+Description: oneword
 Version: 1.0
-Author: TODO
-Author URI: TODO
-Author Email: TODO
+Author: oneword
+Author URI: oneword
+Author Email: oneword
 License:
 
-  Copyright 2013 TODO (email@domain.com)
+  Copyright 2013 oneword (dan@nuugen.com)
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License, version 2, as 
@@ -26,8 +26,8 @@ License:
   
 */
 
-// TODO: rename this class to a proper name for your plugin
-class PluginName {
+// oneword: rename this class to a proper name for your plugin
+class OneWord {
 	 
 	/*--------------------------------------------*
 	 * Constructor
@@ -55,7 +55,7 @@ class PluginName {
 		register_uninstall_hook( __FILE__, array( $this, 'uninstall' ) );
 		
 	    /*
-	     * TODO:
+	     * oneword:
 	     * Define the custom functionality for your plugin. The first parameter of the
 	     * add_action/add_filter calls are the hooks into which your code should fire.
 	     *
@@ -65,9 +65,9 @@ class PluginName {
 	     * For more information: 
 	     * http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
 	     */
-	    add_action( 'TODO', array( $this, 'action_method_name' ) );
-	    add_filter( 'TODO', array( $this, 'filter_method_name' ) );
-
+	    //add_action( 'oneword', array( $this, 'action_method_name' ) );
+	    //add_filter( 'oneword', array( $this, 'filter_method_name' ) );
+		wp_enqueue_script('ow', '/wp-content/plugins/oneword/ow.js')
 	} // end constructor
 	
 	/**
@@ -76,7 +76,7 @@ class PluginName {
 	 * @param	boolean	$network_wide	True if WPMU superadmin uses "Network Activate" action, false if WPMU is disabled or plugin is activated on an individual blog 
 	 */
 	public function activate( $network_wide ) {
-		// TODO:	Define activation functionality here
+		// oneword:	Define activation functionality here
 	} // end activate
 	
 	/**
@@ -85,7 +85,7 @@ class PluginName {
 	 * @param	boolean	$network_wide	True if WPMU superadmin uses "Network Activate" action, false if WPMU is disabled or plugin is activated on an individual blog 
 	 */
 	public function deactivate( $network_wide ) {
-		// TODO:	Define deactivation functionality here		
+		// oneword:	Define deactivation functionality here		
 	} // end deactivate
 	
 	/**
@@ -94,7 +94,7 @@ class PluginName {
 	 * @param	boolean	$network_wide	True if WPMU superadmin uses "Network Activate" action, false if WPMU is disabled or plugin is activated on an individual blog 
 	 */
 	public function uninstall( $network_wide ) {
-		// TODO:	Define uninstall functionality here		
+		// oneword:	Define uninstall functionality here		
 	} // end uninstall
 
 	/**
@@ -102,7 +102,7 @@ class PluginName {
 	 */
 	public function plugin_textdomain() {
 	
-		// TODO: replace "plugin-name-locale" with a unique value for your plugin
+		// oneword: replace "plugin-name-locale" with a unique value for your plugin
 		load_plugin_textdomain( 'plugin-name-locale', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 		
 	} // end plugin_textdomain
@@ -112,7 +112,7 @@ class PluginName {
 	 */
 	public function register_admin_styles() {
 	
-		// TODO:	Change 'plugin-name' to the name of your plugin
+		// oneword:	Change 'plugin-name' to the name of your plugin
 		wp_enqueue_style( 'plugin-name-admin-styles', plugins_url( 'plugin-name/css/admin.css' ) );
 	
 	} // end register_admin_styles
@@ -122,7 +122,7 @@ class PluginName {
 	 */	
 	public function register_admin_scripts() {
 	
-		// TODO:	Change 'plugin-name' to the name of your plugin
+		// oneword:	Change 'plugin-name' to the name of your plugin
 		wp_enqueue_script( 'plugin-name-admin-script', plugins_url( 'plugin-name/js/admin.js' ) );
 	
 	} // end register_admin_scripts
@@ -132,7 +132,7 @@ class PluginName {
 	 */
 	public function register_plugin_styles() {
 	
-		// TODO:	Change 'plugin-name' to the name of your plugin
+		// oneword:	Change 'plugin-name' to the name of your plugin
 		wp_enqueue_style( 'plugin-name-plugin-styles', plugins_url( 'plugin-name/css/display.css' ) );
 	
 	} // end register_plugin_styles
@@ -142,7 +142,7 @@ class PluginName {
 	 */
 	public function register_plugin_scripts() {
 	
-		// TODO:	Change 'plugin-name' to the name of your plugin
+		// oneword:	Change 'plugin-name' to the name of your plugin
 		wp_enqueue_script( 'plugin-name-plugin-script', plugins_url( 'plugin-name/js/display.js' ) );
 	
 	} // end register_plugin_scripts
@@ -160,7 +160,7 @@ class PluginName {
 	 *
 	 */
 	function action_method_name() {
-    	// TODO:	Define your action method here
+    	// oneword:	Define your action method here
 	} // end action_method_name
 	
 	/**
@@ -172,10 +172,10 @@ class PluginName {
 	 *
 	 */
 	function filter_method_name() {
-	    // TODO:	Define your filter method here
+	    // oneword:	Define your filter method here
 	} // end filter_method_name
   
 } // end class
 
-// TODO:	Update the instantiation call of your plugin to the name given at the class definition
+// oneword:	Update the instantiation call of your plugin to the name given at the class definition
 $plugin_name = new PluginName();
