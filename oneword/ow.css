@@ -1,0 +1,74 @@
+.ow-target{
+	padding-top: 30%;
+	font-family: Georgia;
+	
+}
+.ow-target h1{
+	font-size: 5em;
+	color: #000;
+}
+.ow-target h2{
+	color: #F0F0F0;
+	font-size: 3em;
+}
+
+.ow-target h3{
+	color: #FAFAFA;
+	font-size: 4em;
+}
+span.ow-speed-picker{
+	display: none;
+	margin-left: 2em;
+	
+	
+	
+}
+
+span.ow-speed-picker a{
+	background: #FAFAFA;
+	padding: .5em .25em;	
+	border: 1px solid #EEE;
+	cursor: pointer;
+}
+
+.ow-white-out{
+	
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #FFFFFF;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	z-index: 5;
+	display: none;
+	
+} 
+
+.ow-target{
+	-webkit-box-shadow:  1px 2px 3px 2px #666666;
+	box-shadow:  1px 2px 3px 2px #666666;
+	
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#666666')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#66666');
+	width: 90%;
+	top: 10%;
+	left: 5%;
+        height:80%;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	background: #FFF;
+	display: none;
+	position: fixed;
+	z-index: 10;
+	text-align: center;	
+
+}
+
+.ow-modal-close{
+	position: absolute;
+	display: none;
+}
