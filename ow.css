@@ -1,15 +1,18 @@
-body{
-	font-family: Helvetica;
-}
 
-h2{
+.ow-target h1{
+	font-size: 5em;
+	color: #000;
+}
+.ow-target h2{
 	color: #F0F0F0;
+	font-size: 3em;
 }
 
-h3{
+.ow-target h3{
 	color: #FAFAFA;
+	font-size: 4em;
 }
-span.speed-picker{
+span.ow-speed-picker{
 	display: none;
 	margin-left: 2em;
 	
@@ -17,33 +20,34 @@ span.speed-picker{
 	
 }
 
-span.speed-picker a{
+span.ow-speed-picker a{
 	background: #FAFAFA;
 	padding: .5em .25em;	
 	border: 1px solid #EEE;
 	cursor: pointer;
 }
 
-
-.entry{
-	margin-top: 2em;
-}
-.white-out{
+.ow-white-out{
 	
 	height: 100%;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	background: #FFFFFF;
+	background: #333;
 	filter: alpha(opacity=80);
 	opacity: 0.8;
 	z-index: 5;
 	display: none;
 	
 } 
+.oneword-btn{
+	border: 1px solid #CCC;
+	padding: .5em;
+	
+}
 
-.target{
+.ow-target{
 	-webkit-box-shadow:  1px 2px 3px 2px #666666;
 	box-shadow:  1px 2px 3px 2px #666666;
 	
@@ -52,18 +56,26 @@ span.speed-picker a{
 	/* For IE 5.5 - 7 */
 	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#66666');
 	width: 90%;
-	top: 10%;
+	top: 8em;
 	left: 5%;
-	padding-top: 3em;
-	padding-bottom: 3em;
+    height:40em;
 	background: #FFF;
 	display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 10;
 	text-align: center;	
+	padding-top: 10em;
+	font-family: 'Open Sans', sans-serif;
+
 }
 
-.modal-close{
-	position: absolute;
+a.ow-modal-close, a.ow-modal-close:hover {
+	position: fixed;
 	display: none;
+	font-size: 3em;
+	top: 1em;
+	left: 5%;
+	color: #FFF;
+	z-index: 1000;
+	cursor: pointer;
 }
